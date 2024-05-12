@@ -16,7 +16,7 @@ type IDefaultProps = DetailedHTMLProps<
   HTMLTextAreaElement
 >
 
-type ITextareaProps = Omit<IDefaultProps, 'onInput'> & {
+type ITextareaProps = Omit<IDefaultProps, 'onInput' | 'rows'> & {
   style?: StyleXStylesWithout<{
     whiteSpace: unknown
     resize: unknown
@@ -32,9 +32,10 @@ const RawTextarea: FC<ITextareaProps> = ({
   const growerRef = useRef<HTMLDivElement>(null)
 
   const onInput = useCallback((event: KeyboardEvent<HTMLTextAreaElement>) => {
-    console.log({ v: event.currentTarget.value })
     if (growerRef.current) {
-      growerRef.current.innerHTML = event.currentTarget.value
+      const str = event.currentTarget.value
+
+      growerRef.current.innerHTML = str.endsWith('\n') ? str + 'k' : str
     }
   }, [])
 
