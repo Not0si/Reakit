@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
 
   /* Fonts */
   --logo-font: 'Dongle', sans-serif;
@@ -22,6 +22,18 @@
   img {
     filter: brightness(0.8) contrast(1.2);
   }
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+[data-theme='auto'] {
+  color-scheme: light dark;
 }
 
 * {
