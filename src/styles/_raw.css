@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light;
+
+  /* Fonts */
+  --logo-font: 'Dongle', sans-serif;
+  --latin-font: 'Poppins', sans-serif;
+  --arabic-font: 'Righteous', cursive;
+
+  /* colors */
+  --primary-color: #fa8072;
+  --white-color: #fff;
+  --bg-input-primary: #fff;
+  --bg-input-secondary: #e7e5e5;
+  --border-primary-color: 12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --border-primary-color: 12;
+  }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  list-style: none;
+}
