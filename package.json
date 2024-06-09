@@ -1,8 +1,11 @@
 {
-  "name": "kraken",
+  "name": "reakit",
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "author": {
+    "name": "Not0si"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
