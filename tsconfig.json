@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-
+    "strictNullChecks": true,
     //
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -27,6 +27,7 @@
     "paths": {
       "@ui/*": ["./components/ui/*"],
       "@block/*": ["./components/block/*"],
+      "@pattern/*": ["./components/pattern/*"],
       "@i18n/*": ["./i18n/*"],
       "@styles/*": ["./styles/*"],
       "@enums/*": ["./enums/*"],

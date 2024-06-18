@@ -14,6 +14,10 @@ export default defineConfig({
         find: '@block',
         replacement: resolve(__dirname, './src/components/block'),
       },
+      {
+        find: '@pattern',
+        replacement: resolve(__dirname, './src/components/pattern'),
+      },
       { find: '@proto', replacement: resolve(__dirname, './src/proto') },
       {
         find: '@styles',

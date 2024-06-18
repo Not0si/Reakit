@@ -1,9 +1,11 @@
 import useTheme from '@hooks/useTheme/useTheme'
+import GrainyGradient from '@pattern/grainyGradient/GrainyGradient'
 
 const PlayGround = () => {
   const { toggler } = useTheme()
   return (
     <div className="prototype">
+      <GrainyGradient />
       <button
         onClick={() => {
           toggler('light')
