@@ -1,5 +1,5 @@
 import useTheme from '@hooks/useTheme/useTheme'
-import RawCheckBox from '@ui/rawCheckBox/RawCheckBox'
+import RawCheckBox from '@ui/checkBox/CheckBox'
 
 const Prototype = () => {
   const { toggler } = useTheme()

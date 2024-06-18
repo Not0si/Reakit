@@ -3,14 +3,14 @@ import type { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
 import * as stylex from '@stylexjs/stylex'
 import type { StyleXStylesWithout } from '@stylexjs/stylex'
 
-import { styles } from './rawCheckBox.stylex'
+import { styles } from './checkBox.stylex'
 
 type IDefaultProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >
 
-type IRawCheckBoxProps = Omit<IDefaultProps, 'type'> & {
+type ICheckBoxProps = Omit<IDefaultProps, 'type'> & {
   style?: StyleXStylesWithout<{
     ':checked::after': unknown
     aspectRatio: unknown
@@ -20,8 +20,8 @@ type IRawCheckBoxProps = Omit<IDefaultProps, 'type'> & {
   }>
 }
 
-const RawCheckBox: FC<IRawCheckBoxProps> = ({ ...rest }) => {
+const CheckBox: FC<ICheckBoxProps> = ({ ...rest }) => {
   return <input type="checkbox" {...stylex.props(styles.root)} {...rest} />
 }
 
-export default RawCheckBox
+export default CheckBox

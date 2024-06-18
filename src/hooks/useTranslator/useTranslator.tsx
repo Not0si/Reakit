@@ -4,14 +4,14 @@ import dictionaries from '@i18n/dictionaries'
 import { useEffect, useState } from 'react'
 
 interface IObject {
-  [key: string]: any
+  [key: string]: unknown
 }
 
 const useTranslator = () => {
   const [locale, setLocale] = useState<string | undefined>(undefined)
 
   useEffect(() => {
-    var langAttribute = document.documentElement.getAttribute('lang')
+    const langAttribute = document.documentElement.getAttribute('lang')
     console.log('Using getAttribute:', langAttribute)
 
     setLocale('en')

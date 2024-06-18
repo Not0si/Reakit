@@ -9,7 +9,7 @@ import type {
 import * as stylex from '@stylexjs/stylex'
 import type { StyleXStylesWithout } from '@stylexjs/stylex'
 
-import { styles } from './RawTextarea.stylex'
+import { styles } from './textarea.stylex'
 
 type IDefaultProps = DetailedHTMLProps<
   TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -24,11 +24,7 @@ type ITextareaProps = Omit<IDefaultProps, 'onInput' | 'rows'> & {
   }>
 }
 
-const RawTextarea: FC<ITextareaProps> = ({
-  maxLength = 255,
-  style,
-  ...rest
-}) => {
+const Textarea: FC<ITextareaProps> = ({ maxLength = 255, ...rest }) => {
   const growerRef = useRef<HTMLDivElement>(null)
 
   const onInput = useCallback((event: KeyboardEvent<HTMLTextAreaElement>) => {
@@ -52,4 +48,4 @@ const RawTextarea: FC<ITextareaProps> = ({
   )
 }
 
-export default RawTextarea
+export default Textarea
