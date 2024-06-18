@@ -1,11 +1,9 @@
 import useTheme from '@hooks/useTheme/useTheme'
-import RawCheckBox from '@ui/checkBox/CheckBox'
 
-const Prototype = () => {
+const PlayGround = () => {
   const { toggler } = useTheme()
   return (
     <div className="prototype">
-      <RawCheckBox />
       <button
         onClick={() => {
           toggler('light')
@@ -31,4 +29,4 @@ const Prototype = () => {
   )
 }
 
-export default Prototype
+export default PlayGround

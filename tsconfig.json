@@ -29,11 +29,13 @@
       "@block/*": ["./components/block/*"],
       "@i18n/*": ["./i18n/*"],
       "@styles/*": ["./styles/*"],
-      "@proto/*": ["./proto/*"],
       "@enums/*": ["./enums/*"],
       "@hooks/*": ["./hooks/*"],
       "@layouts/*": ["./layouts/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@pages/*": ["./pages/*"],
+      "@router/*": ["./router/*"],
+      "@sketch/*": ["./sketch/*"]
     }
   },
   "include": ["src"],
