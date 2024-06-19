@@ -1,27 +1,20 @@
+import getClassName from '@utils/methods/getClassName'
+
 import type { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
 
-import * as stylex from '@stylexjs/stylex'
-import type { StyleXStylesWithout } from '@stylexjs/stylex'
-
-import { styles } from './checkBox.stylex'
+import styles from './checkBox.module.scss'
 
 type IDefaultProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >
 
-type ICheckBoxProps = Omit<IDefaultProps, 'type'> & {
-  style?: StyleXStylesWithout<{
-    ':checked::after': unknown
-    aspectRatio: unknown
-    height: unknown
-    appearance: unknown
-    position: unknown
-  }>
-}
+export type ICheckBoxProps = Omit<IDefaultProps, 'type'>
 
 const CheckBox: FC<ICheckBoxProps> = ({ ...rest }) => {
-  return <input type="checkbox" {...stylex.props(styles.root)} {...rest} />
+  return (
+    <input type="checkbox" className={getClassName(styles.root)} {...rest} />
+  )
 }
 
 export default CheckBox

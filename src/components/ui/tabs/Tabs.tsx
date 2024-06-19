@@ -1,9 +1,9 @@
-import type { FC, ReactElement, ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import { Children, Fragment, useState } from 'react'
 
 interface ITabsProps {
-  children: ReactElement
-  defaultActiveTab: number
+  children: ReactElement | ReactElement[]
+  defaultActiveTab?: number
 }
 
 const Tabs = ({ defaultActiveTab, children }: ITabsProps) => {
@@ -33,9 +33,12 @@ const Tabs = ({ defaultActiveTab, children }: ITabsProps) => {
         })}
       </nav>
       <section>
-        {Children.map(children, (child, index) => (
-          <Fragment key={index}>{child}</Fragment>
-        ))}
+        {Children.map(children, (child, index) => {
+          if (index === activeTab)
+            return <Fragment key={index}>{child}</Fragment>
+
+          return <Fragment key={index} />
+        })}
       </section>
     </main>
   )
@@ -44,17 +47,17 @@ const Tabs = ({ defaultActiveTab, children }: ITabsProps) => {
 type ITabProps =
   | {
       label: string
-      type: 'tab'
+      type?: 'tab'
       children: ReactNode
     }
   | {
       label: string
-      type: 'link'
-      href: string
+      type?: 'link'
+      href?: string
       children: ReactNode
     }
 
-const Tab: FC<ITabProps> = ({ children }) => {
+const Tab = ({ children }: ITabProps) => {
   return <>{children}</>
 }
 

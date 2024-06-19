@@ -9,14 +9,14 @@ interface IObject {
 
 interface ILocaleReturn {
   locale: I18NType
-  toggler: (targetLocale: I18NType) => void
+  setLocale: (targetLocale: I18NType) => void
   translator: (key: string) => Promise<string>
 }
 
 const useLocale = (): ILocaleReturn => {
-  const [locale, setLocale] = useState<I18NType>('en')
+  const [locale, setCurrentLocale] = useState<I18NType>('en')
 
-  const toggler = useCallback((targetLocale: I18NType) => {
+  const setLocale = useCallback((targetLocale: I18NType) => {
     const html = document.querySelector('html')
     const item = I18N.LOCALES.find((item) => item.lang === targetLocale)
 
@@ -27,7 +27,7 @@ const useLocale = (): ILocaleReturn => {
       // localStorage.setItem('locale', item.lang)
     }
 
-    setLocale(targetLocale)
+    setCurrentLocale(targetLocale)
   }, [])
 
   const translator = useCallback(
@@ -39,7 +39,7 @@ const useLocale = (): ILocaleReturn => {
     [locale],
   )
 
-  return { locale, translator, toggler }
+  return { locale, translator, setLocale }
 }
 
 export default useLocale

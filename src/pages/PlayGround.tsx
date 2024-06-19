@@ -2,27 +2,27 @@ import useTheme from '@hooks/useTheme/useTheme'
 import GrainyGradient from '@pattern/grainyGradient/GrainyGradient'
 
 const PlayGround = () => {
-  const { toggler } = useTheme()
+  const { setTheme } = useTheme()
   return (
     <div className="prototype">
       <GrainyGradient />
       <button
         onClick={() => {
-          toggler('light')
+          setTheme('light')
         }}
       >
         Light
       </button>
       <button
         onClick={() => {
-          toggler('dark')
+          setTheme('dark')
         }}
       >
         Dark
       </button>
       <button
         onClick={() => {
-          toggler('auto')
+          setTheme('auto')
         }}
       >
         System
