@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Reey';
+  src:
+    local('Reey-Regular'),
+    url('./Reey-Regular.otf') format('opentype');
+}

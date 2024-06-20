@@ -1,10 +1,21 @@
 @import '_raw.css';
 @import 'scrollbar.css';
 
+@import '../assets/fonts/Reey/_font_reey.css';
+@import '../assets/fonts/Righteous/_font_righteous.css';
+@import '../assets/fonts/Noto_Sans_Arabic/_font_noto_sans_arabic.css';
+@import '../assets/fonts/Poppins/_font_poppins.css';
+
 .prototype {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  font-family: 'Noto_Sans_Arabic', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }

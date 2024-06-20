@@ -1,4 +1,26 @@
 .root {
+  display: flex;
+  flex-direction: row;
+  padding: 6px 8px;
+  gap: 12px;
+  border-radius: 4px;
+
+  &[data-type='success'] {
+    background: var(--success-color-soft);
+  }
+
+  &[data-type='info'] {
+    background: var(--info-color-soft);
+  }
+
+  &[data-type='warning'] {
+    background: var(--warning-color-soft);
+  }
+
+  &[data-type='error'] {
+    background: var(--error-color-soft);
+  }
+
   .aside {
     display: flex;
   }
