@@ -1,5 +1,5 @@
 @import '_raw.css';
-@import 'scrollbar.css';
+@import '_scrollbar.css';
 
 @import '../assets/fonts/Reey/_font_reey.css';
 @import '../assets/fonts/Righteous/_font_righteous.css';

@@ -1,0 +1,37 @@
+.grainyBg {
+  background-color: salmon;
+  background-image: url('../assets/svgs/noise.svg');
+  background-attachment: fixed;
+}
+
+.blurBg {
+  --bg-opacity: 0.85;
+  --bg-rgb: 255, 255, 255;
+
+  background-color: rgba(var(--bg-rgb), var(--bg-opacity));
+  backdrop-filter: blur(4px);
+}
+
+.glowBg {
+  --bg-color: #ffffff;
+  --spot-color-one: #ef8d4b;
+  --spot-color-two: #5021ff;
+
+  background:
+    radial-gradient(
+      circle,
+      var(--spot-color-one) -60%,
+      hsla(0, 0%, 100%, 0) 45%
+    ),
+    radial-gradient(
+        circle,
+        var(--spot-color-two) -60%,
+        hsla(0, 0%, 100%, 0) 45%
+      )
+      var(--bg-color);
+  background-position-x: -45vw, 28vw;
+  background-position-y:
+    33rem,
+    -17rem;
+  background-repeat: no-repeat, no-repeat;
+}

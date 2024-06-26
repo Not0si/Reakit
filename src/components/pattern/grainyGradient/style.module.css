@@ -1,7 +1,0 @@
-.element {
-  width: 600px;
-  height: 600px;
-  background-color: salmon;
-  background-image: url('./noise.svg');
-  background-attachment: fixed;
-}
