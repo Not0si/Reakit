@@ -2,6 +2,7 @@
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
+    "esModuleInterop": true,
     //
     "target": "ESNext",
     "useDefineForClassFields": true,

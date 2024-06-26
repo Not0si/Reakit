@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 900; /* Black */
+  font-style: normal;
+  src: url('./Objectivity-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 900; /* Black */
+  font-style: italic;
+  src: url('./Objectivity-BlackSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: bold; /* Bold */
+  font-style: normal;
+  src: url('./Objectivity-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: bold; /* Bold */
+  font-style: italic;
+  src: url('./Objectivity-BoldSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 800; /* Extra Bold */
+  font-style: normal;
+  src: url('./Objectivity-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 800; /* Extra Bold */
+  font-style: italic;
+  src: url('./Objectivity-ExtraBoldSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 300; /* Light */
+  font-style: normal;
+  src: url('./Objectivity-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 300; /* Light */
+  font-style: italic;
+  src: url('./Objectivity-LightSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  src: url('./Objectivity-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 500; /* Medium */
+  font-style: italic;
+  src: url('./Objectivity-MediumSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: normal; /* Regular */
+  font-style: normal;
+  src: url('./Objectivity-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: normal; /* Regular */
+  font-style: italic;
+  src: url('./Objectivity-RegularSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 600; /* Super */
+  font-style: normal;
+  src: url('./Objectivity-Super.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 600; /* Super */
+  font-style: italic;
+  src: url('./Objectivity-SuperSlanted.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 100; /* Thin */
+  font-style: normal;
+  src: url('./Objectivity-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-weight: 100; /* Thin */
+  font-style: italic;
+  src: url('./Objectivity-ThinSlanted.woff2') format('woff2');
+}

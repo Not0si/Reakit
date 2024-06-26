@@ -1,26 +1,24 @@
 :root {
   color-scheme: light dark;
 
-  /* Fonts */
-  --logo-font: 'Dongle', sans-serif;
-  --latin-font: 'Poppins', sans-serif;
-  --arabic-font: 'Righteous', cursive;
-
   /* colors */
   --primary-color: #fa7e70;
   --primary-color-soft: hsl(6, 93%, 78%);
 
-  --success-color: #04a22c;
-  --success-color-soft: hsl(135, 95%, 84%);
+  --success-color: #12cf5b;
+  --success-color-soft: #dafde7;
 
-  --info-color: #023e8a;
-  --info-color-soft: hsl(214, 97%, 84%);
+  --info-color: #51a8f8;
+  --info-color-soft: #dbeeff;
 
-  --warning-color: #f77f00;
-  --warning-color-soft: hsl(31, 100%, 84%);
+  --warning-color: #ffc51c;
+  --warning-color-soft: #fef8c6;
 
-  --error-color: #e63946;
-  --error-color-soft: hsl(355, 78%, 84%);
+  --error-color: #dd4a50;
+  --error-color-soft: #fde4e7;
+
+  --link-color: #6089e5;
+  --link-active-color: #9390fd;
 
   /*  */
 }
