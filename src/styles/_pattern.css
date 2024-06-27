@@ -1,5 +1,5 @@
 .grainyBg {
-  background-color: salmon;
+  background-color: hsl(6, 93%, 71%);
   background-image: url('../assets/svgs/noise.svg');
   background-attachment: fixed;
 }
@@ -16,18 +16,15 @@
   --bg-color: #ffffff;
   --spot-color-one: #ef8d4b;
   --spot-color-two: #5021ff;
+  --damper-color: hsla(0, 0%, 100%, 0);
 
   background:
     radial-gradient(
       circle,
       var(--spot-color-one) -60%,
-      hsla(0, 0%, 100%, 0) 45%
+      var(--damper-color) 45%
     ),
-    radial-gradient(
-        circle,
-        var(--spot-color-two) -60%,
-        hsla(0, 0%, 100%, 0) 45%
-      )
+    radial-gradient(circle, var(--spot-color-two) -60%, var(--damper-color) 45%)
       var(--bg-color);
   background-position-x: -45vw, 28vw;
   background-position-y:

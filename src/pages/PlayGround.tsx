@@ -1,12 +1,10 @@
 import useTheme from '@hooks/useTheme/useTheme'
-import GrainyGradient from '@pattern/grainyGradient/GrainyGradient'
 import Button from '@ui/button/Button'
 
 const PlayGround = () => {
   const { setTheme } = useTheme()
   return (
-    <div className="prototype">
-      <GrainyGradient />
+    <div className="prototype blurBg">
       <Button
         onClick={() => {
           setTheme('light')
