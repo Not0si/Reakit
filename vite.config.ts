@@ -1,12 +1,13 @@
-import MillionLint from '@million/lint'
+// import MillionLint from '@million/lint'
+import mdx from '@mdx-js/rollup'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+//
 export default defineConfig({
-  plugins: [react(), MillionLint.vite()],
+  plugins: [react(), mdx()],
   resolve: {
     alias: [
       { find: '@ui', replacement: resolve(__dirname, './src/components/ui') },
@@ -32,6 +33,7 @@ export default defineConfig({
       { find: '@pages', replacement: resolve(__dirname, './src/pages') },
       { find: '@sketch', replacement: resolve(__dirname, './src/sketch') },
       { find: '@router', replacement: resolve(__dirname, './src/router') },
+      { find: '@articles', replacement: resolve(__dirname, './src/articles') },
     ],
   },
 })

@@ -16,7 +16,9 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "@million/lint": "^1.0.0-rc.26",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@mdx-js/rollup": "^3.0.1",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

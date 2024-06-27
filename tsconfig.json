@@ -4,9 +4,10 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     //
+    "types": ["mdx"],
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "ESNext", "DOM", "DOM.Iterable"],
+    "lib": ["ES2015", "ES2020", "ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -37,7 +38,8 @@
       "@utils/*": ["./utils/*"],
       "@pages/*": ["./pages/*"],
       "@router/*": ["./router/*"],
-      "@sketch/*": ["./sketch/*"]
+      "@sketch/*": ["./sketch/*"],
+      "@articles/*": ["./articles/*"]
     }
   },
   "include": ["src"],

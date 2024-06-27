@@ -14,4 +14,10 @@ export const routes: RouteObject[] = [
     element: <PlayGround />,
     // errorElement: <NotFound />,
   },
+  {
+    path: '/blogs/:id',
+    element: <></>,
+    // errorElement: <NotFound />,
+    children: [{}],
+  },
 ]
