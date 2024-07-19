@@ -1,4 +1,4 @@
-import getClassName from '@utils/methods/getClassName'
+import { getClassName } from '@utils/ULib'
 
 import type { FC, ReactNode } from 'react'
 

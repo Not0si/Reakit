@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 400;
+  text-decoration: line-through;
+  transform: rotateZ(-9deg);
+}
+
+.paragraph {
+  padding-block: 60px 30px;
+  max-width: 800px;
+  text-align: center;
+}

@@ -38,8 +38,7 @@
       "@utils/*": ["./utils/*"],
       "@pages/*": ["./pages/*"],
       "@router/*": ["./router/*"],
-      "@sketch/*": ["./sketch/*"],
-      "@articles/*": ["./articles/*"]
+      "@sketch/*": ["./sketch/*"]
     }
   },
   "include": ["src"],
