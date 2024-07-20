@@ -1,4 +1,5 @@
 import { getCaretPosition, setCaretPosition } from '@utils/UDOM'
+import { getClassName } from '@utils/ULib'
 import { type BundledLanguage, type BundledTheme, codeToHtml } from 'shiki'
 
 import type {
@@ -13,22 +14,32 @@ import styles from './codeBloc.module.scss'
 
 interface ICodeBlockProps {
   lang?: BundledLanguage
-  light?: BundledTheme
-  dark?: BundledTheme
+  theme?: BundledTheme
   children: string
   editable?: boolean
   onChange?: (text: string, html: string) => void
+  className?: string
 }
 
-const generateHtml = async (
-  code: string,
-  containerRef: RefObject<HTMLDivElement>,
-  onChange?: (text: string, html: string) => void,
-) => {
+interface IGenerateHtml {
+  code: string
+  lang: BundledLanguage
+  theme: BundledTheme
+  containerRef: RefObject<HTMLDivElement>
+  onChange?: (text: string, html: string) => void
+}
+
+const generateHtml = async ({
+  code,
+  containerRef,
+  onChange,
+  lang,
+  theme,
+}: IGenerateHtml) => {
   try {
     const generatedHtml = await codeToHtml(code, {
-      lang: 'javascript',
-      theme: 'min-light',
+      lang,
+      theme,
     })
 
     if (containerRef?.current) {
@@ -51,6 +62,9 @@ const CodeBlock: FC<ICodeBlockProps> = ({
   children,
   editable = false,
   onChange,
+  lang = 'javascript',
+  theme = 'min-light',
+  className,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [code, setCode] = useState<string>(
@@ -58,8 +72,8 @@ const CodeBlock: FC<ICodeBlockProps> = ({
   )
 
   useEffect(() => {
-    generateHtml(code, containerRef, onChange)
-  }, [code])
+    generateHtml({ code, containerRef, onChange, lang, theme })
+  }, [code, lang, theme])
 
   const updateCode = useCallback((str: string) => {
     const input = str.endsWith('\n') ? str : str + '\n'
@@ -93,7 +107,7 @@ const CodeBlock: FC<ICodeBlockProps> = ({
 
   return (
     <div
-      className={styles.container}
+      className={getClassName(styles.container, className)}
       ref={containerRef}
       onInput={handleElementChange}
       onKeyDown={handleKeyDown}

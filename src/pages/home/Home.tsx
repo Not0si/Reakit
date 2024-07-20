@@ -15,7 +15,17 @@ const Home = (): ReactElement => {
         components, the project seeks to streamline development processes,
         improve code quality, and enhance maintainability for future projects.
       </p>
-      <CodeBlock editable>{'# This is a text editor /n const'}</CodeBlock>
+      <CodeBlock
+        editable
+        lang="python"
+        theme="andromeeda"
+        className={styles.code}
+        onChange={(text) => {
+          console.log({ text })
+        }}
+      >
+        {'# This is a text editor /n const'}
+      </CodeBlock>
     </section>
   )
 }

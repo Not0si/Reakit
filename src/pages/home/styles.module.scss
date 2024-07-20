@@ -20,3 +20,16 @@
   max-width: 800px;
   text-align: center;
 }
+
+.code {
+  width: 100%;
+}
+
+.code > pre {
+  padding: 12px 28px;
+  border-radius: 2px;
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+}
