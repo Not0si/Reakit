@@ -1,10 +1,13 @@
 import CodeBlock from '@ui/codeBloc/CodeBloc'
 
-import type { ReactElement } from 'react'
+import { type ReactElement, useState } from 'react'
 
 import styles from './styles.module.scss'
 
 const Home = (): ReactElement => {
+  const [codeText, setCodeText] = useState('')
+  const [codeHTML, setCodeHTML] = useState('')
+
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Showcase</h1>
@@ -17,14 +20,23 @@ const Home = (): ReactElement => {
       </p>
       <CodeBlock
         editable
-        lang="python"
-        theme="andromeeda"
         className={styles.code}
-        onChange={(text) => {
-          console.log({ text })
+        onChange={(text, html) => {
+          setCodeText(text)
+          setCodeHTML(html)
         }}
       >
-        {'# This is a text editor /n const'}
+        {`// This is a text editor 
+const a = 5
+const b = 8 
+console.log(Math.round(a + b))`}
+      </CodeBlock>
+      <CodeBlock lang="html" className={styles.code}>
+        {codeHTML}
+      </CodeBlock>
+
+      <CodeBlock lang="markdown" className={styles.code}>
+        {codeText}
       </CodeBlock>
     </section>
   )

@@ -75,6 +75,12 @@ const CodeBlock: FC<ICodeBlockProps> = ({
     generateHtml({ code, containerRef, onChange, lang, theme })
   }, [code, lang, theme])
 
+  useEffect(() => {
+    if (editable) return
+    const ncode = children.endsWith('\n') ? children : children + '\n'
+    generateHtml({ code: ncode, containerRef, onChange, lang, theme })
+  }, [editable, children, containerRef, onChange, lang, theme])
+
   const updateCode = useCallback((str: string) => {
     const input = str.endsWith('\n') ? str : str + '\n'
     setCode(input)
