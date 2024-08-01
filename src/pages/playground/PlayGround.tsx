@@ -1,32 +1,21 @@
-import useTheme from '@hooks/useTheme/useTheme'
-import Button from '@ui/button/Button'
+import NumberInput from '@ui/numberInput/NumberInput'
+
+import styles from './styles.module.scss'
 
 const PlayGround = () => {
-  const { setTheme } = useTheme()
   return (
-    <div className="prototype blurBg">
-      <Button
-        onClick={() => {
-          setTheme('light')
-        }}
-      >
-        Light
-      </Button>
-      <Button
-        onClick={() => {
-          setTheme('dark')
-        }}
-      >
-        Dark
-      </Button>
-      <Button
-        onClick={() => {
-          setTheme('auto')
-        }}
-      >
-        System
-      </Button>
-    </div>
+    <section className={styles.container}>
+      <section className={styles.wrapper}>
+        <NumberInput
+          type="integer"
+          onChange={(value) => {
+            console.info({ value })
+          }}
+          max={400}
+        />
+        <input type="number" name="" id="" />
+      </section>
+    </section>
   )
 }
 

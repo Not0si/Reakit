@@ -1,0 +1,20 @@
+.container,
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../assets/svgs/graph-paper.svg');
+}
+
+.wrapper {
+  width: max-content;
+  height: max-content;
+  background: #fff;
+}

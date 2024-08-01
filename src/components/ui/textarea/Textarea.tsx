@@ -24,13 +24,16 @@ const Textarea: FC<ITextareaProps> = ({
 }) => {
   const growerRef = useRef<HTMLDivElement>(null)
 
-  const onInput = useCallback((event: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (growerRef.current) {
-      const str = event.currentTarget.value
-
-      growerRef.current.innerHTML = str.endsWith('\n') ? str + 'k' : str
-    }
-  }, [])
+  const onInput = useCallback(
+    (event: KeyboardEvent<HTMLTextAreaElement>) => {
+      if (growerRef.current) {
+        const str = event.currentTarget.value
+        console.log({ str })
+        growerRef.current.innerHTML = str.endsWith('\n') ? str + 'k' : str
+      }
+    },
+    [growerRef],
+  )
 
   return (
     <section className={getClassName(styles.container)}>

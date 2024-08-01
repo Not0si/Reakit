@@ -22,3 +22,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+input {
+  border: 1px solid red;
+  height: 30px;
+  padding: 4px 12px;
+}

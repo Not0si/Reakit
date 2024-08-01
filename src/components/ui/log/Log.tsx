@@ -4,7 +4,7 @@ import type { FC, ReactNode } from 'react'
 
 import styles from './logBox.module.scss'
 
-const LogBoxIcons = {
+const LogIcons = {
   info: (
     <svg
       stroke="currentColor"
@@ -66,20 +66,43 @@ const LogBoxIcons = {
   ),
 }
 
-interface ILogBoxProps {
+interface ILogProps {
   children: ReactNode
   type?: 'success' | 'info' | 'warning' | 'error'
+  className?: string
+  isDecorated?: boolean
+  hasSymbol?: boolean
 }
 
-const LogBox: FC<ILogBoxProps> = ({ type = 'info', children }) => {
+const Log: FC<ILogProps> = ({
+  type = 'info',
+  children,
+  className,
+  isDecorated = false,
+  hasSymbol = false,
+}) => {
+  if (!hasSymbol) {
+    return (
+      <main
+        data-type={type}
+        data-decorated={isDecorated}
+        className={getClassName(styles.main, styles.root, className)}
+      >
+        {children}
+      </main>
+    )
+  }
+
   return (
-    <section data-type={type} className={getClassName(styles.root)}>
-      <aside className={getClassName(styles.aside)}>
-        {LogBoxIcons?.[type]}
-      </aside>
+    <section
+      data-type={type}
+      data-decorated={isDecorated}
+      className={getClassName(styles.root, className)}
+    >
+      <aside className={getClassName(styles.aside)}>{LogIcons?.[type]}</aside>
       <main className={getClassName(styles.main)}> {children}</main>
     </section>
   )
 }
 
-export default LogBox
+export default Log

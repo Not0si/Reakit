@@ -7,22 +7,43 @@
 
   &[data-type='success'] {
     background: var(--success-color-soft);
+
+    & svg {
+      stroke: var(--success-color);
+    }
   }
 
   &[data-type='info'] {
     background: var(--info-color-soft);
+
+    & svg {
+      stroke: var(--info-color);
+    }
   }
 
   &[data-type='warning'] {
     background: var(--warning-color-soft);
+
+    & svg {
+      stroke: var(--warning-color);
+    }
   }
 
   &[data-type='error'] {
     background: var(--error-color-soft);
+
+    & svg {
+      stroke: var(--error-color);
+    }
   }
 
   .aside {
     display: flex;
+
+    & svg {
+      width: 19px;
+      height: 19px;
+    }
   }
 
   .main {

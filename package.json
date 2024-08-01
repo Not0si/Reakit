@@ -12,7 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "npx prettier . --write",
-    "reset": "rm -rf node_modules && npm install",
+    "reset": "rm -rf node_modules dist && npm install",
     "test": "vitest"
   },
   "dependencies": {

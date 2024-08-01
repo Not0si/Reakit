@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   max-width: 1200px;
+  min-height: 1200px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,6 @@
 
 .code > pre {
   padding: 12px 28px;
-  border-radius: 2px;
   border: 1px solid #d8d8d8;
   width: 100%;
   max-width: 600px;
